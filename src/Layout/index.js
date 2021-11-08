@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import NotFound from "./NotFound";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useParams } from "react-router-dom";
+import Home from "./Home";
 
 function Layout() {
+  const [deck, setDeck] = useState({});
+
+  useEffect(()=> {
+    
+  }, [])
+
   return (
     <>
       <Header />
       <div className="container">
         {/* TODO: Implement the screen starting here */}
         <Switch>
-          <Route>
+          <Route  exact path="/" >
+            <Home />
           </Route>
           <Route>
             <NotFound />
