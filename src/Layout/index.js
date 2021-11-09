@@ -3,13 +3,11 @@ import Header from "./Header";
 import NotFound from "./NotFound";
 import { Switch, Route, useParams } from "react-router-dom";
 import Home from "./Home/Home";
+import Study from "./Decks/Study";
+import CreateDeck from "./Decks/CreateDeck";
 
 function Layout() {
-  const [deck, setDeck] = useState({});
-
-  useEffect(()=> {
-
-  }, [])
+  
 
   return (
     <>
@@ -19,6 +17,12 @@ function Layout() {
         <Switch>
           <Route  exact path="/" >
             <Home />
+          </Route>
+          <Route>
+            <CreateDeck path='/decks/new' />
+          </Route>
+          <Route path="/decks/:deckId/study">
+            <Study />
           </Route>
           <Route>
             <NotFound />

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
-import { deleteDeck } from "../../utils/api";
 import HandleDeleteDeck from "./HandleDeleteDeck";
 
 export default function DeckItem({ deck }) {
