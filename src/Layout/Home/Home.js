@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react'
 // import CreateDeck from './CreateDeck'
 import { Link } from "react-router-dom"
-import ListDecks from './ListDecks'
-import { listDecks } from '../utils/api'
+import ListDecks from '../Decks/ListDecks'
+import { listDecks } from '../../utils/api'
 
 export default function Home() {
     const [decks, setDecks] = useState([]);
+    // delete
     
     useEffect(() => {
         async function loadDecks() {           

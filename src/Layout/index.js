@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import NotFound from "./NotFound";
 import { Switch, Route, useParams } from "react-router-dom";
-import Home from "./Home";
+import Home from "./Home/Home";
 
 function Layout() {
   const [deck, setDeck] = useState({});
 
   useEffect(()=> {
-    
+
   }, [])
 
   return (

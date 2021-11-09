@@ -1,7 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { deleteDeck } from "../../utils/api";
+import HandleDeleteDeck from "./HandleDeleteDeck";
 
 export default function DeckItem({ deck }) {
+  const history = useHistory();
+  
   return (
     <li key={deck.id} className="card">
     <div className="row">
@@ -21,29 +25,16 @@ export default function DeckItem({ deck }) {
           <span className="oi oi-book mr-1"></span>
           Study
         </Link>
-        <button className="btn btn-danger float-right m-2">
+        <button onClick={(event) => {
+          event.preventDefault();
+          HandleDeleteDeck(deck.id);
+          history.go(0)
+        }} className="btn btn-danger float-right m-2">
           <span className="oi oi-trash"></span>
         </button>
       </div>
     </div>
   </li>
-    // <li key={deck.id} className="card">
-    //   <div className="row">
-    //     <h4 className="card-title col m-2">{deck.name}</h4>
-    //     <p className="col-1 float-right m-2">{deck.cards.length} cards</p>
-    //   </div>
-    //   <p>{deck.description}</p>
-    //   <div>
-    //   <Link className="btn btn-secondary" to={`decks/${deck.id}`}>
-    //     <span className="oi oi-eye  mr-1"></span>View
-    //   </Link>
-    //   <Link className="btn btn-primary" to={`decks/${deck.id}/study`}>
-    //     <span className="oi oi-book  mr-1"></span>Study
-    //   </Link>
-    //   <button className="btn btn-danger">
-    //     <span className="oi oi-trash"></span>
-    //   </button>
-    //   </div>     
-    // </li>
+    
   );
 }
