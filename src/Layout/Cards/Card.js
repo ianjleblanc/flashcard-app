@@ -45,8 +45,6 @@ export default function Card({ cards = [] }) {
     // if currentCard > cards.length show restart prompt
   }
 
-  //   console.log(cards[currentCard].front)
-
   return (
     <div className="card">
       <div className="card-body">
