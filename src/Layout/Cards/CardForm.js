@@ -8,6 +8,7 @@ export default function CardForm({
   onCancelUrl,
   onCancelLabel,
 }) {
+  // creat a form to re-use for edit card and add card components
   return (
     <form onSubmit={onSubmit}>
       <div>

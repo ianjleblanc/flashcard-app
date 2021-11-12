@@ -13,12 +13,12 @@ export default function DeckView({ deck }) {
         <p>{deck.description}</p>
         <div className="row">
           <div className="col">
-            {/* edit link path */}
+            
             <Link to={`/decks/${deck.id}/edit`} className="btn btn-secondary m-1">
               <span className="oi oi-pencil mr-1"></span>
               Edit
             </Link>
-            {/* edit link path */}
+            
             <Link
               to={`/decks/${deck.id}/study`}
               className="btn btn-primary m-1"
@@ -26,7 +26,7 @@ export default function DeckView({ deck }) {
               <span className="oi oi-book mr-1"></span>
               Study
             </Link>
-            {/* edit link path */}
+            
             <Link
               to={`/decks/${deck.id}/cards/new`}
               className="btn btn-primary m-1"

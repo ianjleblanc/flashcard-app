@@ -26,7 +26,7 @@ export default function Card({ cards = [] }) {
     setCardFront(!cardFront);
   }
 
-  // cardFront && 
+   
 
 
   function nextBtnHandler(event) {

@@ -16,9 +16,6 @@ export default function Study() {
     loadDeck();
   }, [deckId]);
 
-  
-
-  
 
 
   return (

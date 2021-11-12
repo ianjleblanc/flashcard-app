@@ -7,7 +7,8 @@ export default function CardListItem({ card }) {
   const history = useHistory();
 
   return (
-    <li>
+    // create a card component to plug into card list
+    <li key={card.id}>
       <div className="card">
         <div className="row">
           <div className="col">{card.front}</div>

@@ -12,18 +12,22 @@ export default function EditCard() {
 
   const history = useHistory();
 
+
   useEffect(() => {
+    // get the deck information passing in deckId
     async function getDeck() {
       const loadedDeck = await readDeck(deckId);
       setDeck(loadedDeck);
     }
     getDeck();
 
+    // get the card information passing in cardId
     async function getCard() {
       const loadedCard = await readCard(cardId);
       setCard(loadedCard);
     }
     getCard();
+    // everytime deckId or cardId changes re-render
   }, [deckId, cardId]);
 
   useEffect(() => {
@@ -37,6 +41,7 @@ export default function EditCard() {
   async function handleEditCard(event) {
     event.preventDefault();
     await updateCard(formState);
+    // brings back to deck page after save button pressed
     history.push(`/decks/${deckId}`);
   }
 

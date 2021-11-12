@@ -1,9 +1,9 @@
 {
   "decks": [
     {
-      "name": "Rendering in React ",
-      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. ",
-      "id": 1
+      "id": 1,
+      "name": "Rendering in React",
+      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. "
     },
     {
       "name": "React Router",
@@ -14,7 +14,7 @@
   "cards": [
     {
       "id": 1,
-      "front": "Differentiate between Real DOM and Virtual DOM. ",
+      "front": "Differentiate between Real DOM and Virtual DOM.",
       "back": "Virtual DOM updates are faster but do not directly update the HTML",
       "deckId": 1
     },
@@ -48,12 +48,6 @@
       "back": "b",
       "deckId": 1,
       "id": 7
-    },
-    {
-      "front": "try again front",
-      "back": "try again back",
-      "deckId": 1,
-      "id": 8
     }
   ]
 }

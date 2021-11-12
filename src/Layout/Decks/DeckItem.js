@@ -6,6 +6,7 @@ export default function DeckItem({ deck }) {
   const history = useHistory();
   
   return (
+    // create a deck item to plug into a mapped list
     <li key={deck.id} className="card">
     <div>
     <div className="row">
