@@ -22,9 +22,7 @@ function Layout() {
           <Route  exact path="/" >
             <Home />
           </Route>
-          <Route path="/decks/new">
-            <CreateDeck  />
-          </Route>
+          
           <Route path="/decks/:deckId/study">
             <Study />
           </Route>
@@ -34,8 +32,12 @@ function Layout() {
           <Route path="/decks/:deckId/cards/:cardId/edit">
             <EditCard />
           </Route>
+          
           <Route path="/decks/:deckId/cards/new">
             <AddCards />
+          </Route>
+          <Route path="/decks/new">
+            <CreateDeck  />
           </Route>
           <Route path="/decks/:deckId">
             <Deck />

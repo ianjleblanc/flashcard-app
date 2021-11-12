@@ -7,9 +7,10 @@ export default function DeckItem({ deck }) {
   
   return (
     <li key={deck.id} className="card">
+    <div>
     <div className="row">
       <h4 className="card-title col m-2">{deck.name}</h4>
-      <p className="col-1 float-right mt-2">{deck.cards.length} cards</p>
+      <div className="float-right mt-2 pr-4"><p>{deck.cards.length} cards</p></div>
     </div>
     <div>
       <p className="card-text m-2">{deck.description}</p>
@@ -32,6 +33,7 @@ export default function DeckItem({ deck }) {
           <span className="oi oi-trash"></span>
         </button>
       </div>
+    </div>
     </div>
   </li>
     

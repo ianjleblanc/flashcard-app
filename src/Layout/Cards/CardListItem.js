@@ -14,14 +14,7 @@ export default function CardListItem({ card }) {
           <div className="col">{card.back}</div>
         </div>
         <div>
-          <Link
-            to={`/decks/${card.deckId}/cards/${card.id}/edit`}
-            className="btn btn-secondary m-1 float-right"
-          >
-            <span className="oi oi-pencil mr-1"></span>
-            Edit
-          </Link>
-          <button
+        <button
             onClick={(event) => {
               event.preventDefault();
               HandleDeleteDeck(card.id);
@@ -31,6 +24,14 @@ export default function CardListItem({ card }) {
           >
             <span className="oi oi-trash"></span>
           </button>
+          <Link
+            to={`/decks/${card.deckId}/cards/${card.id}/edit`}
+            className="btn btn-secondary m-1 float-right"
+          >
+            <span className="oi oi-pencil mr-1"></span>
+            Edit
+          </Link>
+          
         </div>
       </div>
     </li>

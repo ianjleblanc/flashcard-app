@@ -42,10 +42,9 @@ export default function CreateDeck() {
         <h1>Create Deck</h1>
       </div>
       <div>
-        <form onSubmit={handleSubmit}>
-          
+        <form onSubmit={handleSubmit}>         
           <label htmlFor="name" className="w-100 form-label">
-            <p className="mb-1">Name</p>
+            Name</label>
             <input
               className="form-control"
               id="name"
@@ -55,11 +54,11 @@ export default function CreateDeck() {
               onChange={nameChangeHandler}
               value={deckName}
             ></input>
-            <p className="mb-1 mt-3">Description</p>
+            <label htmlFor="description">Description</label>
             <textarea
               className="form-control"
-              id="name"
-              name="name"
+              id="description"
+              name="description"
               placeholder="Brief description of the deck"
               onChange={descriptionChangeHandler}
               value={deckDescription}
@@ -68,8 +67,6 @@ export default function CreateDeck() {
               Cancel
             </button>
             <button type="submit" className="btn btn-primary ml-1 mt-3">Submit</button>
-            
-          </label>
         </form>
       </div>
     </div>

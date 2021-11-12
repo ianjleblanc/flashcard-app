@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { Link, useParams } from "react-router-dom";
 import { readDeck } from "../../utils/api";
-import Card from "../Cards/Card";
+import StudyCard from "../Cards/StudyCard";
 
 export default function Study() {
   const [deck, setDeck] = useState([]);
@@ -16,7 +16,7 @@ export default function Study() {
     loadDeck();
   }, [deckId]);
 
-  console.log(deck)
+  
 
   
 
@@ -41,7 +41,7 @@ export default function Study() {
               Study: {deck.name}
           </h2>
       </div>     
-        <Card cards={deck.cards}/>      
+        <StudyCard cards={deck.cards}/>      
     </div>
   );
 }
