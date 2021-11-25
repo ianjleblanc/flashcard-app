@@ -29,7 +29,7 @@ export default function EditDeck() {
         setDeckDescription(loadedDeck.description)
       }
       loadDeck();
-    }, []);
+    }, [deckId]);
 
 
     const nameChangeHandler = (event) => 
